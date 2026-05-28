@@ -1,0 +1,99 @@
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 1000;
+  transform: translateY(-160%);
+  background: var(--white);
+  color: var(--black);
+  padding: .75rem 1rem;
+  transition: transform .25s var(--ease);
+}
+.skip-link:focus { transform: translateY(0); }
+
+.section-shell { width: var(--shell); margin-inline: auto; }
+.section-pad { padding-block: clamp(76px, 11vw, 150px); }
+
+.eyebrow {
+  margin: 0 0 22px;
+  color: var(--wood);
+  font-size: .72rem;
+  font-weight: 900;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.eyebrow--light { color: rgba(255, 255, 255, .78); }
+.eyebrow span {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 10px;
+  border-radius: 999px;
+  background: var(--green-2);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: .85rem 1.35rem;
+  border: 1px solid transparent;
+  font-size: .76rem;
+  font-weight: 900;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+  transition: transform .25s var(--ease), background .25s var(--ease), color .25s var(--ease), border-color .25s var(--ease);
+}
+.button:hover { transform: translateY(-2px); }
+.button--light { background: var(--white); color: var(--black); }
+.button--ghost { border-color: rgba(255, 255, 255, .42); color: var(--white); }
+.button--ghost:hover { background: var(--white); color: var(--black); }
+.button--submit {
+  width: 100%;
+  min-height: 54px;
+  background: var(--black);
+  color: var(--white);
+}
+.button--submit:hover { background: var(--wood); }
+
+.check-list {
+  display: grid;
+  gap: 12px;
+  padding: 0;
+  margin: 30px 0 0;
+  list-style: none;
+}
+.check-list li {
+  position: relative;
+  padding-left: 28px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.check-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .55em;
+  width: 8px;
+  height: 8px;
+  background: var(--green-2);
+}
+.check-list--light li { color: rgba(255, 255, 255, .72); }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .8s var(--ease), transform .8s var(--ease);
+}
+.reveal--left { transform: translateX(-34px); }
+.reveal--right { transform: translateX(34px); }
+.reveal.is-visible {
+  opacity: 1;
+  transform: translate(0);
+}
+
+@media (max-width: 640px) {
+  .section-pad { padding-block: 64px; }
+  .button { width: 100%; }
+}

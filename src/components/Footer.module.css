@@ -1,0 +1,52 @@
+.footer {
+  background: #2a1a08;
+  color: var(--white);
+  padding-block: 70px 28px;
+}
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1.3fr repeat(3, 1fr);
+  gap: 34px;
+}
+.footer__logo {
+  display: inline-block;
+  margin-bottom: 18px;
+  font-family: "Barlow Condensed", Inter, sans-serif;
+  font-size: 2.2rem;
+  font-weight: 900;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.footer__logo sup { color: var(--green-2); font-size: .5em; }
+.footer h2 {
+  margin-bottom: 18px;
+  font-family: Inter, sans-serif;
+  font-size: .78rem;
+  letter-spacing: .14em;
+}
+.footer p, .footer a {
+  display: block;
+  margin: 0 0 10px;
+  color: rgba(255, 255, 255, .62);
+  font-size: .94rem;
+}
+.footer a:hover { color: var(--green-2); }
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 50px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, .12);
+  color: rgba(255, 255, 255, .46);
+  font-size: .82rem;
+}
+
+@media (max-width: 980px) {
+  .footer__grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 640px) {
+  .footer__grid { grid-template-columns: 1fr; }
+  .footer__bottom { flex-direction: column; }
+}

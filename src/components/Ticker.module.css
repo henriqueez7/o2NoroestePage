@@ -1,0 +1,30 @@
+.ticker {
+  overflow: hidden;
+  background: #efe2cc;
+  color: var(--black);
+  border-block: 1px solid var(--line);
+}
+.ticker__track {
+  display: flex;
+  width: max-content;
+  gap: 30px;
+  padding: 18px 0;
+  animation: ticker 34s linear infinite;
+}
+.ticker span {
+  color: rgba(42, 26, 8, .72);
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.ticker span::after {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-left: 30px;
+  border-radius: 50%;
+  background: var(--green-2);
+}
+@keyframes ticker { to { transform: translateX(-50%); } }

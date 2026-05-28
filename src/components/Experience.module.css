@@ -1,0 +1,59 @@
+.experience {
+  position: relative;
+  min-height: 620px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  color: var(--white);
+  background: var(--black);
+}
+.experience__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 1;
+  filter: saturate(1.04) contrast(1.05);
+}
+.experience::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at center, rgba(42, 26, 8, .18), rgba(42, 26, 8, .5) 72%),
+    linear-gradient(180deg, rgba(0, 0, 0, .08), rgba(0, 0, 0, .42));
+}
+.experience__overlay {
+  position: relative;
+  z-index: 1;
+  width: min(720px, calc(100vw - 40px));
+  text-align: center;
+  opacity: 0;
+  transform: translateY(18px);
+  animation: experienceTextReveal .9s var(--ease) 5s forwards;
+}
+.experience__overlay p:not(:first-child) {
+  color: rgba(255, 255, 255, .78);
+  line-height: 1.8;
+}
+
+@keyframes experienceTextReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .experience__overlay {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .experience { min-height: 560px; }
+}

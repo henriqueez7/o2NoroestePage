@@ -1,0 +1,52 @@
+:root {
+  --black: #2a1a08;
+  --ink: #17130d;
+  --muted: #756d61;
+  --line: #e8dfd1;
+  --paper: #f7f2ea;
+  --white: #fff;
+  --green: #7b5522;
+  --green-2: #d8bd82;
+  --sand: #ead9bd;
+  --cream: #fbf7ef;
+  --wood: #8d5f2c;
+  --shadow: 0 24px 80px rgba(73, 47, 20, .12);
+  --ease: cubic-bezier(.22, 1, .36, 1);
+  --shell: min(1160px, calc(100vw - 40px));
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: var(--cream);
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+}
+img { display: block; width: 100%; height: auto; }
+a { color: inherit; text-decoration: none; }
+button, input, select { font: inherit; }
+::selection { background: var(--wood); color: var(--white); }
+
+h2 {
+  margin: 0;
+  font-family: "Barlow Condensed", Inter, sans-serif;
+  font-size: clamp(3rem, 6.6vw, 6rem);
+  line-height: .9;
+  text-transform: uppercase;
+}
+
+@media (max-width: 640px) {
+  :root { --shell: min(100vw - 28px, 1160px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
