@@ -96,4 +96,8 @@
 @media (max-width: 640px) {
   .section-pad { padding-block: 64px; }
   .button { width: 100%; }
+  .reveal--left,
+  .reveal--right {
+    transform: translateY(28px);
+  }
 }

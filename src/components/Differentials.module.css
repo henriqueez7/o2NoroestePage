@@ -6,6 +6,7 @@
   align-items: end;
   margin-bottom: 48px;
 }
+.section-heading--split > * { min-width: 0; }
 .section-heading p {
   color: var(--muted);
   font-size: 1rem;
@@ -19,6 +20,7 @@
   border: 1px solid var(--line);
 }
 .feature-card {
+  min-width: 0;
   min-height: 270px;
   padding: clamp(24px, 4vw, 40px);
   background: var(--white);

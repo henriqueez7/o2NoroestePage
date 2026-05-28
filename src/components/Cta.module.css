@@ -12,11 +12,13 @@
 }
 .cta__copy h2 { max-width: 620px; }
 .cta__copy p:not(:first-child) {
+  min-width: 0;
   color: rgba(255, 255, 255, .74);
   font-size: 1rem;
   line-height: 1.82;
 }
 .lead-form {
+  min-width: 0;
   padding: clamp(24px, 4vw, 42px);
   background: rgba(255, 255, 255, .96);
   color: var(--black);
@@ -40,6 +42,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 14px;
+  min-width: 0;
 }
 .lead-form input,
 .lead-form select {

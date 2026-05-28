@@ -19,6 +19,7 @@
 }
 .concept__media:hover img { transform: scale(1.045); }
 .concept__copy p:not(:first-child) {
+  min-width: 0;
   color: var(--muted);
   font-size: 1rem;
   line-height: 1.82;
@@ -30,6 +31,7 @@
   margin-top: 36px;
 }
 .stats div {
+  min-width: 0;
   min-height: 108px;
   padding: 20px;
   border: 1px solid var(--line);

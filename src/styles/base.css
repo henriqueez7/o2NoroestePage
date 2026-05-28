@@ -16,14 +16,28 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
 body {
+  width: 100%;
+  max-width: 100%;
   margin: 0;
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: var(--ink);
   background: var(--cream);
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
+}
+#root,
+main,
+section,
+header,
+footer {
+  max-width: 100%;
 }
 img { display: block; width: 100%; height: auto; }
 a { color: inherit; text-decoration: none; }
@@ -36,10 +50,12 @@ h2 {
   font-size: clamp(3rem, 6.6vw, 6rem);
   line-height: .9;
   text-transform: uppercase;
+  overflow-wrap: anywhere;
 }
 
 @media (max-width: 640px) {
   :root { --shell: min(100vw - 28px, 1160px); }
+  body { position: relative; }
 }
 
 @media (prefers-reduced-motion: reduce) {
